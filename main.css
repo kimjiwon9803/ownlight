@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 80px; /* header 높이 설정 */
+    background-color: #D9D9D9; /* 필요하면 배경색 설정 */
+}
+#logo img {
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 180px;
+}
+.container {
+    display: flex;
+}
+/* 네비게이션 */
+.navbar {
+    width: 230px;
+    height: 1080px;
+    background-color: #ffffff;
+    margin-top: -16px;
+}
+
+#top_menu {
+    list-style: none;
+    margin-left: -40px;
+}
+#top_menu a {
+    display: flex; /* Flexbox를 사용하여 아이콘과 텍스트를 가로로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-between; /* 텍스트와 아이콘 사이에 일정한 간격을 두기 */
+    width: 193px;
+    height: 50px;
+    color: inherit;
+    font-size: 14px;
+    background: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #EAEAEA;
+    padding-left: 37px;
+    font-size: 15px;
+}
+#top_menu a:hover {
+    color: #ffffff;
+    background-color: #8A0000;
+}
+#angle_icon{
+    display: inline-block;
+     /* 기본 상태: 90도 회전 */
+    transition: transform 0.3s ease; /* 회전 애니메이션 */
+    font-size: 13px;
+    color: #444444;
+    margin-right: 37px; 
+}
+#top_menu a:hover #angle_icon{
+    color: #ffffff;
+    background-color: #8A0000;
+}
+#sub_menu a {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    color: #000000;
+    width: 187px;
+    height: 30px;
+    background: #faf9f8;
+    list-style: none;
+    margin-left: 0px;
+    font-size: 13px;
+    border-bottom: solid 1px #EAEAEA;
+    padding-left: 45px;
+}
+#sub_menu2 a{
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    color: #8b3333;
+    width: 187px;
+    height: 30px;
+    background: #ff8000;
+    list-style: none;
+    margin-left: 0px;
+    font-size: 13px;
+    border-bottom: solid 1px #EAEAEA;
+}
+
+#lnb > ul > li ul {
+    display: none;
+    list-style: none;
+}
+
+#sub_menu a:hover,#sub_menu2 a:hover {
+    color: #ffffff;
+    background-color: #8A0000;
+}
+#sub_menu2 a {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    color: #000000;
+    width: 187px;
+    height: 30px;
+    background: #faf9f8;
+    list-style: none;
+    margin-left: -40px;
+    font-size: 13px;
+    border-bottom: solid 1px #EAEAEA;
+    padding-left: 45px;
+}
+
+/* 클릭된 항목의 텍스트 색상 스타일 */
+/* #lnb li.on > a {
+    background-color: #8A0000;
+    color: white;
+}
+/* 클릭된 항목에서 아이콘 스타일 변경 */
+#lnb li.on #angle_icon #sub_menu {
+    color: white; /* 아이콘도 강조 */
+} */
+
+#lnb > ul li.noDepth a {
+    background-image: none !important;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.floors {
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.floor-button {
+    width: 120px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.floor-button:hover {
+    background-color: #c0c0c0;
+}
+
+.floor-button p {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.grid div {
+    background-color: #dcdcdc;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+}
+#sub_menu {
+    display: none; /* 기본적으로 숨김 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #greater_icon {
+    display: inline-block;
+    transform: rotate(90deg); /* 기본 상태: 90도 회전 */
+    transition: transform 0.3s ease; /* 회전 애니메이션 */
+    font-size: 13px;
+    color: #444444;
+    margin-left: 10px; /* 아이콘의 왼쪽 여백 */
+  }
+  
+  /* 활성화 상태 - 메뉴 열리면 아이콘 회전 */
+  .menu-item.active #sub_menu {
+    display: block; /* 서브메뉴 활성화 */
+  }
+  
+  .menu-item.active #greater_icon {
+    transform: rotate(270deg); /* 90도에서 270도로 회전 */
+  }
